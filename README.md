@@ -4,7 +4,7 @@
 
 A **Nuxt 4 proposal generator/template** that:
 
-1. **Looks and navigates**  (slide deck UX, 16:9 canvas, prev/index/next, keyboard shortcuts, fullscreen).
+1. **Looks and navigates** (slide deck UX, 16:9 canvas, prev/index/next, keyboard shortcuts, fullscreen).
 2. Lets you generate new proposals by editing **data files** (not duplicating HTML pages).
 3. Deploys as a **static site to GitHub Pages** (same hosting outcome, just with a build step).
 
@@ -17,14 +17,14 @@ Static HTML pages ⟶ Nuxt pages generated from a proposal “schema” + slide 
 ### **Core idea**
 
 - Each proposal is a “record” (YAML/JSON) that declares:
-    - client + project metadata
-    - theme tokens (colors, logo, etc.)
-    - an ordered list of slides, where each slide is a **type** + **payload**
+  - client + project metadata
+  - theme tokens (colors, logo, etc.)
+  - an ordered list of slides, where each slide is a **type** + **payload**
 - Nuxt renders:
-    - /p/:slug as an index/table-of-contents
-    - /p/:slug/s/:n as slide n
+  - /p/:slug as an index/table-of-contents
+  - /p/:slug/s/:n as slide n
 
-### 
+###
 
 ## **Target folder structure**
 
@@ -66,8 +66,8 @@ proposal-deck/
 
 Notes:
 
-- data/proposals/*.json is deliberately boring and reliable. You can move to YAML later if you want.
-- Slide “types” live in components/slides/* so you can build a reusable library.
+- data/proposals/\*.json is deliberately boring and reliable. You can move to YAML later if you want.
+- Slide “types” live in components/slides/\* so you can build a reusable library.
 
 ## **Step-by-step implementation plan (copy/paste-friendly for Copilot)**
 
@@ -187,15 +187,11 @@ Implementation options:
 Create:
 
 - app/pages/p/[slug]/index.vue
-    
-    Shows the deck landing page:
-    
-    - title, metadata, and a clickable list of slides (like your current index.html role).
+  Shows the deck landing page:
+  - title, metadata, and a clickable list of slides (like your current index.html role).
 - app/pages/p/[slug]/s/[n].vue
-    
-    Renders slide number n using:
-    
-    - <SlideRenderer :slide="slides[n-1]" />
+  Renders slide number n using:
+  - <SlideRenderer :slide="slides[n-1]" />
 
 ### **9) SlideRenderer (the “templating engine”)**
 
@@ -309,5 +305,4 @@ This is the bridge from “slick web proposal” to “client-friendly attachmen
 Treat slides as compositions of blocks:
 
 - Bullets, IconList, TwoColumn, Callout, PricingTable, Timeline
-    
-    This keeps new slide types rare; you just rearrange blocks.
+  This keeps new slide types rare; you just rearrange blocks.

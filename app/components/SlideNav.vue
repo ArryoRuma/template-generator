@@ -14,10 +14,10 @@
 
 <script setup lang="ts">
 interface Props {
-  prevUrl?: string
-  indexUrl: string
-  nextUrl?: string
+  prevUrl?: string;
+  indexUrl: string;
+  nextUrl?: string;
 }
 
-defineProps<Props>()
+defineProps<Props>();
 </script>

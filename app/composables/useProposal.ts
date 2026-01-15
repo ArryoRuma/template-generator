@@ -1,56 +1,59 @@
 export interface Proposal {
-  slug: string
-  title: string
-  date: string
+  slug: string;
+  title: string;
+  date: string;
   company: {
-    name: string
-    tagline: string
-  }
+    name: string;
+    tagline: string;
+  };
   preparedBy: {
-    name: string
-    email: string
-    phone: string
-    website: string
-  }
+    name: string;
+    email: string;
+    phone: string;
+    website: string;
+  };
   theme: {
-    primary: string
-    secondary: string
-  }
+    primary: string;
+    secondary: string;
+  };
   slides: Array<{
-    type: string
-    data: Record<string, unknown>
-  }>
+    type: string;
+    data: Record<string, unknown>;
+  }>;
 }
 
 // Import all proposals using import.meta.glob
-const proposalModules = import.meta.glob<{ default: Proposal }>('../data/proposals/*.json', { 
-  eager: true
-})
+const proposalModules = import.meta.glob<{ default: Proposal }>(
+  "@/data/proposals/*.json",
+  {
+    eager: true,
+  },
+);
 
 // Create a map of proposals by slug
-const proposals = new Map<string, Proposal>()
+const proposals = new Map<string, Proposal>();
 Object.entries(proposalModules).forEach(([_path, module]) => {
-  const proposal = module.default
-  proposals.set(proposal.slug, proposal)
-})
+  const proposal = module.default;
+  proposals.set(proposal.slug, proposal);
+});
 
 export const useProposal = (slug: string) => {
-  const proposal = proposals.get(slug)
-  
+  const proposal = proposals.get(slug);
+
   if (!proposal) {
     throw createError({
       statusCode: 404,
-      statusMessage: `Proposal not found: ${slug}`
-    })
+      statusMessage: `Proposal not found: ${slug}`,
+    });
   }
-  
+
   return {
     proposal,
     slides: proposal.slides,
-    slideCount: proposal.slides.length
-  }
-}
+    slideCount: proposal.slides.length,
+  };
+};
 
 export const useAllProposals = () => {
-  return Array.from(proposals.values())
-}
+  return Array.from(proposals.values());
+};
