@@ -5,18 +5,21 @@ This Nuxt 4 proposal generator creates professional slide decks for proposals.
 ## Setup
 
 1. Install dependencies:
+
 ```bash
-npm install
+pnpm install
 ```
 
 2. Run development server:
+
 ```bash
-npm run dev
+pnpm run dev
 ```
 
 3. Build for production:
+
 ```bash
-npm run build
+pnpm run build
 ```
 
 ## Creating a New Proposal
@@ -47,7 +50,9 @@ npm run build
 ## Customization
 
 ### Theme Colors
+
 Each proposal can have custom theme colors defined in the `theme` object:
+
 ```json
 "theme": {
   "primary": "#2E5C8A",
@@ -56,6 +61,7 @@ Each proposal can have custom theme colors defined in the `theme` object:
 ```
 
 ### Adding New Slide Types
+
 1. Create a new component in `app/components/slides/`
 2. Register it in `app/components/SlideRenderer.vue`
 3. Use it in your proposal data
@@ -65,9 +71,10 @@ Each proposal can have custom theme colors defined in the `theme` object:
 The project is configured to deploy to GitHub Pages automatically when you push to the main branch.
 
 To manually deploy:
+
 ```bash
-npm run generate
-npx gh-pages --dotfiles -d .output/public
+pnpm run generate
+pnpx gh-pages --dotfiles -d .output/public
 ```
 
 ## Project Structure

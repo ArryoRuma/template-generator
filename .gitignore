@@ -7,8 +7,8 @@
 dist
 
 # Node dependencies
+.node_modules
 node_modules
-
 # Logs
 logs
 *.log
@@ -44,3 +44,4 @@ coverage
 # yarn.lock
 # pnpm-lock.yaml
 
+node_modules
