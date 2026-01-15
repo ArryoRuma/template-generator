@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   
   // Static Site Generation for GitHub Pages
-  ssr: true,
+  ssr: false,
   nitro: { 
     preset: 'github_pages' 
   },
