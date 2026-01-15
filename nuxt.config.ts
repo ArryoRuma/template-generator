@@ -2,12 +2,15 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-12-22',
   devtools: { enabled: true },
-  
+
   // Static Site Generation for GitHub Pages
   ssr: false,
+  
+
   nitro: { 
     preset: 'github_pages' 
   },
+
   app: {
     baseURL: process.env.NUXT_APP_BASE_URL || '/template-generator/',
     head: {
@@ -21,8 +24,11 @@ export default defineNuxtConfig({
       ]
     }
   },
+
   css: [
     '@/assets/css/theme.css',
     '@/assets/css/slide.css',
   ],
+
+  modules: ['@nuxt/eslint', '@nuxt/icon', '@nuxt/hints', '@nuxt/a11y'],
 })

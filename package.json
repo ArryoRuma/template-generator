@@ -3,16 +3,54 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "nuxt build",
     "dev": "nuxt dev",
+    "fix": "pnpm run format:fix && pnpm run lint --fix",
+    "format": "prettier --check .",
+    "format:fix": "prettier --write .",
+    "check": "pnpm run fix && pnpm run typecheck",
+    "status": "git status && git add .",
+    "build": "nuxt build",
+    "depcheck": "pnpm dlx depcheck",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "preinstall": "npx only-allow pnpm"
+    "lint": "eslint .",
+    "typecheck": "nuxt typecheck",
+    "clean": "npx nuxt cleanup"
   },
   "dependencies": {
+    "@iconify-json/lucide": "^1.2.81",
+    "@iconify-json/simple-icons": "^1.2.63",
+    "@nuxt/a11y": "1.0.0-alpha.1",
+    "@nuxt/content": "^3.9.0",
+    "@nuxt/fonts": "0.12.1",
+    "@nuxt/hints": "1.0.0-alpha.3",
+    "@nuxt/image": "^2.0.0",
+    "@nuxt/scripts": "0.13.1",
+    "@nuxt/ui": "^4.3.0",
+    "@nuxtjs/seo": "3.3.0",
+    "@standard-schema/spec": "^1.1.0",
+    "@unhead/vue": "^2.0.19",
+    "@vueuse/nuxt": "^14.1.0",
+    "better-sqlite3": "^12.5.0",
+    "marked": "^17.0.1",
+    "motion-v": "^1.7.4",
     "nuxt": "^4.2.2",
-    "vue": "^3.5.26",
-    "vue-router": "^4.6.4"
-  }
+    "nuxt-gtag": "4.1.0",
+    "nuxt-og-image": "^5.1.13",
+    "unhead": "^2.0.19",
+    "zod": "^4.2.1"
+  },
+  "devDependencies": {
+    "@nuxt/eslint": "^1.12.1",
+    "eslint": "^9.39.2",
+    "eslint-config-prettier": "^10.1.8",
+    "playwright-core": "^1.57.0",
+    "typescript": "^5.9.3",
+    "vue-tsc": "^3.1.8"
+  },
+  "resolutions": {
+    "unimport": "4.1.1"
+  },
+  "packageManager": "pnpm@10.26.1+sha512.664074abc367d2c9324fdc18037097ce0a8f126034160f709928e9e9f95d98714347044e5c3164d65bd5da6c59c6be362b107546292a8eecb7999196e5ce58fa"
 }
