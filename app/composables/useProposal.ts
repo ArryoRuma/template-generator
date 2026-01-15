@@ -23,7 +23,7 @@ export interface Proposal {
 }
 
 // Import all proposals using import.meta.glob
-const proposalModules = import.meta.glob<{ default: Proposal }>('~/data/proposals/*.json', { 
+const proposalModules = import.meta.glob<{ default: Proposal }>('../data/proposals/*.json', { 
   eager: true
 })
 

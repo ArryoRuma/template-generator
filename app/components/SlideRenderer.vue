@@ -13,7 +13,13 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, type Component } from 'vue'
+import CoverSlide from './slides/CoverSlide.vue'
+import SectionSlide from './slides/SectionSlide.vue'
+import TimelineSlide from './slides/TimelineSlide.vue'
+import InvestmentSlide from './slides/InvestmentSlide.vue'
+import NextStepsSlide from './slides/NextStepsSlide.vue'
+import TwoColumnBulletsSlide from './slides/TwoColumnBulletsSlide.vue'
 
 interface Props {
   slide: {
@@ -24,14 +30,14 @@ interface Props {
 
 const props = defineProps<Props>()
 
-const slideComponent = computed(() => {
-  const registry: Record<string, unknown> = {
-    'cover': resolveComponent('CoverSlide'),
-    'section': resolveComponent('SectionSlide'),
-    'timeline': resolveComponent('TimelineSlide'),
-    'investment': resolveComponent('InvestmentSlide'),
-    'nextSteps': resolveComponent('NextStepsSlide'),
-    'twoColumnBullets': resolveComponent('TwoColumnBulletsSlide'),
+const slideComponent = computed<Component | undefined>(() => {
+  const registry: Record<string, Component> = {
+    'cover': CoverSlide,
+    'section': SectionSlide,
+    'timeline': TimelineSlide,
+    'investment': InvestmentSlide,
+    'nextSteps': NextStepsSlide,
+    'twoColumnBullets': TwoColumnBulletsSlide,
   }
   
   return registry[props.slide.type]
