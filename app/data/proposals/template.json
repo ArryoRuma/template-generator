@@ -1,0 +1,120 @@
+{
+  "slug": "template",
+  "title": "AV System Design Proposal",
+  "date": "January 2026",
+  "company": {
+    "name": "Client Name",
+    "tagline": "Proposal Tagline"
+  },
+  "preparedBy": {
+    "name": "Your Name / Company",
+    "email": "you@domain.com",
+    "phone": "(555) 123-4567",
+    "website": "domain.com"
+  },
+  "theme": {
+    "primary": "#2E5C8A",
+    "secondary": "#4A90E2"
+  },
+  "slides": [
+    {
+      "type": "cover",
+      "data": {
+        "headline": "AV System Design Proposal",
+        "subhead": "Design-Only"
+      }
+    },
+    {
+      "type": "section",
+      "data": {
+        "title": "Project Understanding",
+        "bullets": [
+          "Comprehensive AV system design for modern facility",
+          "Focus on user experience and technical excellence",
+          "Scalable architecture for future growth",
+          "Integration with existing infrastructure"
+        ]
+      }
+    },
+    {
+      "type": "twoColumnBullets",
+      "data": {
+        "title": "Scope of Work",
+        "leftTitle": "Design Services",
+        "leftBullets": [
+          "System architecture design",
+          "Equipment specifications",
+          "Technical drawings",
+          "Integration planning"
+        ],
+        "rightTitle": "Deliverables",
+        "rightBullets": [
+          "Complete design package",
+          "Bill of materials",
+          "Installation guidelines",
+          "Testing procedures"
+        ]
+      }
+    },
+    {
+      "type": "timeline",
+      "data": {
+        "title": "Project Timeline",
+        "items": [
+          {
+            "phase": "Week 1-2",
+            "title": "Discovery & Planning",
+            "description": "Site assessment, requirements gathering, and initial concepts"
+          },
+          {
+            "phase": "Week 3-4",
+            "title": "Design Development",
+            "description": "Detailed system design and equipment selection"
+          },
+          {
+            "phase": "Week 5-6",
+            "title": "Documentation",
+            "description": "Technical drawings, specifications, and final deliverables"
+          }
+        ]
+      }
+    },
+    {
+      "type": "investment",
+      "data": {
+        "title": "Investment Summary",
+        "total": "$15,000",
+        "breakdown": {
+          "Design Services": "$12,000",
+          "Documentation": "$2,000",
+          "Project Management": "$1,000"
+        },
+        "notes": [
+          "Fixed fee for design-only services",
+          "Implementation costs separate",
+          "Payment schedule: 50% upfront, 50% on completion"
+        ]
+      }
+    },
+    {
+      "type": "nextSteps",
+      "data": {
+        "title": "Next Steps",
+        "steps": [
+          {
+            "title": "Review & Approval",
+            "description": "Review this proposal and provide feedback or approval to proceed"
+          },
+          {
+            "title": "Contract Execution",
+            "description": "Sign agreement and process initial payment to begin project"
+          },
+          {
+            "title": "Kickoff Meeting",
+            "description": "Schedule project kickoff to align on timeline and deliverables"
+          }
+        ]
+      }
+    }
+  ]
+}
