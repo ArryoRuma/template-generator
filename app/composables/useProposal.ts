@@ -23,14 +23,14 @@ export interface Proposal {
 }
 
 // Import all proposals using import.meta.glob
-const proposalModules = import.meta.glob<{ default: Proposal }>('/data/proposals/*.json', { 
-  eager: true 
+const proposalModules = import.meta.glob<{ default: Proposal }>('~/data/proposals/*.json', { 
+  eager: true,
+  import: 'default'
 })
 
 // Create a map of proposals by slug
 const proposals = new Map<string, Proposal>()
-Object.entries(proposalModules).forEach(([path, module]) => {
-  const proposal = module.default
+Object.entries(proposalModules).forEach(([path, proposal]) => {
   proposals.set(proposal.slug, proposal)
 })
 

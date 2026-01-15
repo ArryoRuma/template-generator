@@ -21,7 +21,7 @@ npm run build
 
 ## Creating a New Proposal
 
-1. Copy `data/proposals/template.json` to a new file (e.g., `client-name.json`)
+1. Copy `app/data/proposals/template.json` to a new file (e.g., `client-name.json`)
 2. Update the proposal data:
    - Change the `slug` to match your filename
    - Update client information
@@ -78,11 +78,11 @@ npx gh-pages --dotfiles -d .output/public
 │   ├── components/          # Vue components
 │   │   └── slides/          # Slide type components
 │   ├── composables/         # Reusable logic
+│   ├── data/
+│   │   └── proposals/       # Proposal data files
 │   ├── layouts/             # Layout templates
 │   ├── pages/               # Route pages
 │   └── plugins/             # Nuxt plugins
-├── data/
-│   └── proposals/           # Proposal data files
 ├── public/                  # Static assets
 └── nuxt.config.ts          # Nuxt configuration
 ```
