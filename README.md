@@ -1,15 +1,4 @@
 # template-generator
-## **What you have now (baseline to match)**
-
-Your current repo is a **static HTML “proposal as a slide deck” site** with:
-
-- index.html as a landing page with slide navigation
-- slides/1.html … slides/11.html as individual slides
-- css/style.css holding centralized theme tokens + styles (CSS variables)
-- js/config.js for centralized company/contact/proposal fields
-- js/nav.js for keyboard + button navigation + fullscreen shortcuts
-
-It’s explicitly designed to run on **GitHub Pages from main with no build step**, and the slides are **1280×720 (16:9)** with CDN dependencies (Tailwind, Font Awesome, Google Fonts).
 
 ## **What I want (Nuxt version)**
 
