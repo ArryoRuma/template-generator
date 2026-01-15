@@ -24,8 +24,7 @@
         @mouseover="(e: MouseEvent) => (e.currentTarget as HTMLElement).style.background = 'var(--color-accent)'"
         @mouseout="(e: MouseEvent) => (e.currentTarget as HTMLElement).style.background = 'white'"
       >
-        <span
-style="background: var(--color-primary); color: white; width: 30px; height: 30px; 
+        <span style="background: var(--color-primary); color: white; width: 30px; height: 30px; 
                      border-radius: 50%; display: flex; align-items: center; justify-content: center; 
                      font-size: 0.875rem; font-weight: 600;">
           {{ index + 1 }}

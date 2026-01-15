@@ -48,8 +48,8 @@ export default defineNuxtPlugin(() => {
     
     window.addEventListener('keydown', handleKeyDown)
     
-    // Cleanup on scope disposal
-    onScopeDispose(() => {
+    // Cleanup when component unmounts
+    onBeforeUnmount(() => {
       window.removeEventListener('keydown', handleKeyDown)
     })
   }
