@@ -1,17 +1,17 @@
 /* Theme tokens - default colors */
 :root {
-  --color-primary: #2E5C8A;
-  --color-secondary: #4A90E2;
+  --color-primary: #2e5c8a;
+  --color-secondary: #4a90e2;
   --color-background: #ffffff;
   --color-text: #333333;
   --color-text-light: #666666;
-  --color-accent: #E8F1F8;
+  --color-accent: #e8f1f8;
   --color-border: #e0e0e0;
-  
+
   /* Typography */
-  --font-primary: 'Montserrat', sans-serif;
-  --font-secondary: 'Open Sans', sans-serif;
-  
+  --font-primary: "Montserrat", sans-serif;
+  --font-secondary: "Open Sans", sans-serif;
+
   /* Spacing */
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
@@ -28,7 +28,12 @@ body {
   background: var(--color-background);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-primary);
   margin: 0;
   font-weight: 600;
