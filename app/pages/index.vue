@@ -8,10 +8,11 @@
         :to="`/p/${proposal.slug}`"
         style="text-decoration: none; color: inherit;"
       >
-        <div style="border: 1px solid var(--color-border); border-radius: 8px; padding: 1.5rem; 
+        <div
+style="border: 1px solid var(--color-border); border-radius: 8px; padding: 1.5rem; 
                     transition: box-shadow 0.2s; cursor: pointer;"
-             @mouseover="(e) => e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)'"
-             @mouseout="(e) => e.currentTarget.style.boxShadow = 'none'">
+             @mouseover="(e: MouseEvent) => (e.currentTarget as HTMLElement).style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)'"
+             @mouseout="(e: MouseEvent) => (e.currentTarget as HTMLElement).style.boxShadow = 'none'">
           <h2 style="color: var(--color-primary); margin-bottom: 0.5rem; font-size: 1.5rem;">
             {{ proposal.title }}
           </h2>

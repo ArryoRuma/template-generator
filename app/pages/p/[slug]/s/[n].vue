@@ -27,7 +27,7 @@ if (slideNumber < 1 || slideNumber > slideCount) {
   })
 }
 
-const currentSlide = slides[slideNumber - 1]
+const currentSlide = slides[slideNumber - 1]!
 
 const { prevUrl, nextUrl, indexUrl } = useSlideNav(slug, slideNumber, slideCount)
 
