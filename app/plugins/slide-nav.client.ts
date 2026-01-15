@@ -1,4 +1,4 @@
-export default defineNuxtPlugin(() => {
+export default defineNuxtPlugin((nuxtApp) => {
   if (import.meta.client) {
     const router = useRouter()
     
@@ -34,12 +34,6 @@ export default defineNuxtPlugin(() => {
           router.push(`/p/${slug}`)
           break
           
-        case 'End':
-          event.preventDefault()
-          // Navigate to last slide - would need to know total count
-          // This is a simplified version
-          break
-          
         case 'f':
         case 'F':
           event.preventDefault()
@@ -54,13 +48,9 @@ export default defineNuxtPlugin(() => {
     
     window.addEventListener('keydown', handleKeyDown)
     
-    // Cleanup on unmount
-    return {
-      provide: {
-        slideNav: {
-          cleanup: () => window.removeEventListener('keydown', handleKeyDown)
-        }
-      }
-    }
+    // Cleanup on app unmount
+    nuxtApp.hook('app:unmounted', () => {
+      window.removeEventListener('keydown', handleKeyDown)
+    })
   }
 })

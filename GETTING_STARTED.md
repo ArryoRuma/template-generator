@@ -41,7 +41,7 @@ npm run build
 
 - **Arrow Left / Page Up**: Previous slide
 - **Arrow Right / Page Down / Space**: Next slide
-- **Home**: Return to proposal index
+- **Home**: Return to slide list for current proposal
 - **F**: Toggle fullscreen
 
 ## Customization

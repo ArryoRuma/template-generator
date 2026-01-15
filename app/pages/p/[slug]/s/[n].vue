@@ -16,9 +16,10 @@ const route = useRoute()
 const slug = route.params.slug as string
 const slideNumber = parseInt(route.params.n as string)
 
+// Load proposal first (may throw 404 if not found)
 const { proposal, slides, slideCount } = useProposal(slug)
 
-// Validate slide number
+// Then validate slide number
 if (slideNumber < 1 || slideNumber > slideCount) {
   throw createError({
     statusCode: 404,

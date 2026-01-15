@@ -11,18 +11,9 @@ export const useSlideNav = (slug: string, currentSlide: number, totalSlides: num
   
   const indexUrl = computed(() => `/p/${slug}`)
   
-  const toggleFullscreen = () => {
-    if (!document.fullscreenElement) {
-      document.documentElement.requestFullscreen()
-    } else {
-      document.exitFullscreen()
-    }
-  }
-  
   return {
     prevUrl,
     nextUrl,
-    indexUrl,
-    toggleFullscreen
+    indexUrl
   }
 }
