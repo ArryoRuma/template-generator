@@ -18,14 +18,14 @@ import { computed } from 'vue'
 interface Props {
   slide: {
     type: string
-    data: any
+    data: Record<string, unknown>
   }
 }
 
 const props = defineProps<Props>()
 
 const slideComponent = computed(() => {
-  const registry: Record<string, any> = {
+  const registry: Record<string, unknown> = {
     'cover': resolveComponent('CoverSlide'),
     'section': resolveComponent('SectionSlide'),
     'timeline': resolveComponent('TimelineSlide'),

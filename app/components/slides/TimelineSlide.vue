@@ -2,7 +2,8 @@
   <div class="slide-content">
     <h2 style="font-size: 2.5rem; color: var(--color-primary); margin-bottom: 2rem;">{{ data.title }}</h2>
     <div style="display: flex; flex-direction: column; gap: 1.5rem;">
-      <div v-for="(item, index) in data.items" :key="index" 
+      <div
+v-for="(item, index) in data.items" :key="index" 
            style="display: flex; gap: 1.5rem; align-items: flex-start;">
         <div style="min-width: 120px; font-weight: 600; color: var(--color-primary);">
           {{ item.phase }}

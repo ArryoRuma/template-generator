@@ -29,6 +29,14 @@ if (slideNumber < 1 || slideNumber > slideCount) {
 
 const currentSlide = slides[slideNumber - 1]
 
+if (!currentSlide) {
+  // This should not happen if slideCount and slides are consistent, but we guard against it
+  throw createError({
+    statusCode: 404,
+    statusMessage: 'Slide not found'
+  })
+}
+
 const { prevUrl, nextUrl, indexUrl } = useSlideNav(slug, slideNumber, slideCount)
 
 // Apply proposal theme

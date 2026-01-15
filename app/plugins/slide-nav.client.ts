@@ -1,4 +1,4 @@
-export default defineNuxtPlugin((nuxtApp) => {
+export default defineNuxtPlugin(() => {
   if (import.meta.client) {
     const router = useRouter()
     
@@ -48,8 +48,8 @@ export default defineNuxtPlugin((nuxtApp) => {
     
     window.addEventListener('keydown', handleKeyDown)
     
-    // Cleanup on app unmount
-    nuxtApp.hook('app:unmounted', () => {
+    // Cleanup when component unmounts
+    onBeforeUnmount(() => {
       window.removeEventListener('keydown', handleKeyDown)
     })
   }

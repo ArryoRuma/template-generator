@@ -21,8 +21,8 @@
         style="padding: 1rem 1.5rem; background: white; border: 1px solid var(--color-border); 
                border-radius: 4px; text-decoration: none; color: inherit; display: flex; 
                align-items: center; gap: 1rem; transition: background 0.2s;"
-        @mouseover="(e) => e.currentTarget.style.background = 'var(--color-accent)'"
-        @mouseout="(e) => e.currentTarget.style.background = 'white'"
+        @mouseover="(e: MouseEvent) => (e.currentTarget as HTMLElement).style.background = 'var(--color-accent)'"
+        @mouseout="(e: MouseEvent) => (e.currentTarget as HTMLElement).style.background = 'white'"
       >
         <span style="background: var(--color-primary); color: white; width: 30px; height: 30px; 
                      border-radius: 50%; display: flex; align-items: center; justify-content: center; 
