@@ -1,0 +1,120 @@
+{
+  "slug": "showpro",
+  "title": "ShowPro Productions Website Design Proposal",
+  "date": "January 2026",
+  "company": {
+    "name": "ShowPro Productions",
+    "tagline": "Proposal Tagline"
+  },
+  "preparedBy": {
+    "name": "Larryon Truman / TruMedia Creative",
+    "email": "lar@trumediacreative.com",
+    "phone": "(903) 635-0855",
+    "website": "trumediacreative.com"
+  },
+  "theme": {
+    "primary": "#2E5C8A",
+    "secondary": "#4A90E2"
+  },
+  "slides": [
+    {
+      "type": "cover",
+      "data": {
+        "headline": "ShowPro Productions Website Design Proposal",
+        "subhead": "Design-Only"
+      }
+    },
+    {
+      "type": "section",
+      "data": {
+        "title": "Project Understanding",
+        "bullets": [
+          "Comprehensive website design for ShowPro Productions",
+          "Focus on user experience and visual appeal",
+          "Scalable architecture for future growth",
+          "Integration with existing branding and marketing strategies"
+        ]
+      }
+    },
+    {
+      "type": "twoColumnBullets",
+      "data": {
+        "title": "Scope of Work",
+        "leftTitle": "Design Services",
+        "leftBullets": [
+          "Website architecture design",
+          "Visual design concepts",
+          "Responsive layout planning",
+          "Brand integration"
+        ],
+        "rightTitle": "Deliverables",
+        "rightBullets": [
+          "Complete design package",
+          "Bill of materials",
+          "Installation guidelines",
+          "Testing procedures"
+        ]
+      }
+    },
+    {
+      "type": "timeline",
+      "data": {
+        "title": "Project Timeline",
+        "items": [
+          {
+            "phase": "Week 1-2",
+            "title": "Discovery & Planning",
+            "description": "Site assessment, requirements gathering, and initial concepts"
+          },
+          {
+            "phase": "Week 3-4",
+            "title": "Design Development",
+            "description": "Detailed system design and equipment selection"
+          },
+          {
+            "phase": "Week 5-6",
+            "title": "Documentation",
+            "description": "Technical drawings, specifications, and final deliverables"
+          }
+        ]
+      }
+    },
+    {
+      "type": "investment",
+      "data": {
+        "title": "Investment Summary",
+        "total": "$15,000",
+        "breakdown": {
+          "Design Services": "$12,000",
+          "Documentation": "$2,000",
+          "Project Management": "$1,000"
+        },
+        "notes": [
+          "Fixed fee for design-only services",
+          "Implementation costs separate",
+          "Payment schedule: 50% upfront, 50% on completion"
+        ]
+      }
+    },
+    {
+      "type": "nextSteps",
+      "data": {
+        "title": "Next Steps",
+        "steps": [
+          {
+            "title": "Review & Approval",
+            "description": "Review this proposal and provide feedback or approval to proceed"
+          },
+          {
+            "title": "Contract Execution",
+            "description": "Sign agreement and process initial payment to begin project"
+          },
+          {
+            "title": "Kickoff Meeting",
+            "description": "Schedule project kickoff to align on timeline and deliverables"
+          }
+        ]
+      }
+    }
+  ]
+}
